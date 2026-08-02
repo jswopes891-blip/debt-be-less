@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-mesh {
+    background-color: #f3f4f6;
+    background-image: 
+      radial-gradient(at 0% 0%, #dbeafe 0%, transparent 50%),
+      radial-gradient(at 100% 0%, #d1fae5 0%, transparent 50%),
+      radial-gradient(at 100% 100%, #dbeafe 0%, transparent 50%),
+      radial-gradient(at 0% 100%, #f3f4f6 0%, transparent 50%);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.08);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.88);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(30, 58, 138, 0.12);
+  }
+
+  .glass-panel-dark {
+    background: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .title-serif {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Debt Be Less",
+  "description": "Calculate your exact debt payoff date, compare Snowball and Avalanche strategies, and see how small extra payments save thousands in interest.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
