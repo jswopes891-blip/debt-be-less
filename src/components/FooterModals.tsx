@@ -30,29 +30,55 @@ export const FooterModals: React.FC<FooterModalProps> = ({ modalType, onClose })
           <X className="w-5 h-5" />
         </button>
 
-        {/* Modal 1: Privacy Policy */}
+             {/* Modal 1: Privacy Policy */}
         {modalType === 'privacy' && (
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-emerald-400">
               <ShieldCheck className="w-7 h-7" />
               <h3 className="text-2xl font-bold text-white">Privacy Policy</h3>
             </div>
-            <p className="text-xs text-slate-400">Last updated: July 2026</p>
+            <p className="text-xs text-slate-400">Last updated: September 2026</p>
             <div className="space-y-3 text-slate-300 text-sm leading-relaxed max-h-[60vh] overflow-y-auto pr-2">
               <p>
                 At <strong>Debt Be Less</strong>, we respect your financial privacy. Our application is designed with client-side computation at its core.
               </p>
+
               <h4 className="text-white font-bold text-base pt-2">1. No Personal Financial Storage</h4>
               <p>
                 We do not collect, store, transmit, or sell any credit card balances, interest rates, or loan numbers that you enter into our calculator. All calculations execute locally inside your browser session.
               </p>
+
               <h4 className="text-white font-bold text-base pt-2">2. Analytics & Cookies</h4>
               <p>
-                We may use standard essential cookies or minimal aggregated performance analytics to improve site speed and accessibility. No financial profile or identifiable debt data is ever tied to these records.
+                We may use standard essential cookies or minimal aggregated performance analytics to improve site speed, accessibility, and the user experience. No financial profile or identifiable debt data is tied to these records.
               </p>
-              <h4 className="text-white font-bold text-base pt-2">3. Third-Party Links</h4>
+
+              <h4 className="text-white font-bold text-base pt-2">3. Advertising & Third-Party Ad Technology</h4>
               <p>
-                Our educational content may contain informational references. We do not share your calculator inputs with third-party lenders or advertising networks.
+                If advertising is displayed on Debt Be Less, third-party advertising providers, including Google, may use cookies or similar technologies to help serve, measure, and personalize advertisements where applicable. These providers may use information such as your visits to this and other websites to provide advertising based on your interests.
+              </p>
+              <p>
+                You can learn more about how Google uses information from sites and apps that use its services and manage certain advertising preferences through Google's Ads Settings. You may also visit About Ads for information about interest-based advertising and available controls.
+              </p>
+
+              <h4 className="text-white font-bold text-base pt-2">4. Calculator Information</h4>
+              <p>
+                The debt information you enter into the calculator is processed locally in your browser to generate estimates. We do not sell, rent, or share your calculator inputs, balances, APRs, payment amounts, or payoff calculations with lenders, advertisers, or data brokers.
+              </p>
+
+              <h4 className="text-white font-bold text-base pt-2">5. Third-Party Links</h4>
+              <p>
+                Our educational content may contain links or references to third-party websites. We are not responsible for the privacy practices or content of those third-party sites. We encourage you to review their privacy policies before providing personal information.
+              </p>
+
+              <h4 className="text-white font-bold text-base pt-2">6. No Account Required</h4>
+              <p>
+                Debt Be Less does not require an account or credit card to use the calculator. We do not connect to your bank, credit card, or other financial accounts.
+              </p>
+
+              <h4 className="text-white font-bold text-base pt-2">7. Changes to This Policy</h4>
+              <p>
+                We may update this Privacy Policy from time to time as our website, services, or advertising practices change. Any updated policy will be posted on this page with a revised "Last updated" date.
               </p>
             </div>
           </div>
