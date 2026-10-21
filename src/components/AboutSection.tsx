@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import {
   Sparkles,
@@ -9,7 +11,11 @@ import {
   ArrowRight,
   Info,
   Layers,
-  Compass
+  Compass,
+  Users,
+  Lock,
+  FileCheck,
+  AlertCircle
 } from 'lucide-react';
 
 interface AboutSectionProps {
@@ -25,23 +31,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onCalculateClick }) 
 
   const keyQuestions = [
     'How long will it take to pay off my debt?',
-    'When could I reach my debt-free date?',
-    'How much interest might I pay?',
-    'What happens if I pay a little extra each month?',
-    'Could a different payoff strategy help me get there faster?'
+    'When could I reach my estimated debt-free date?',
+    'How much interest might I accumulate over time?',
+    'What happens if I add an extra $50 or $100 each month?',
+    'Would the Snowball or Avalanche method fit my goals better?'
   ];
 
   const featuresList = [
-    'Debt payoff calculations',
-    'Debt-free date estimates',
-    'Extra-payment savings',
-    'Debt payoff strategies',
-    'Debt Snowball information',
-    'Debt Avalanche information',
-    'Snowball vs. Avalanche comparisons',
-    'Debt payoff progress tracking',
-    'Frequently asked questions',
-    'Educational articles about reducing debt'
+    'Single-debt payoff calculator with variable frequencies',
+    'Multi-debt portfolio organizer & priority sequencer',
+    'Estimated debt-free timeline projections',
+    'Extra-payment interest & time savings modeling',
+    'Side-by-side Debt Snowball vs. Avalanche comparisons',
+    'Visual month-by-month balance trajectory charts',
+    'Step-by-step practical educational debt guide',
+    'Comprehensive frequently asked questions (FAQ)'
   ];
 
   return (
@@ -55,38 +59,42 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onCalculateClick }) 
             <span>About Debt Be Less</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-950 title-serif tracking-tight">
-            Why Debt Be Less?
+            Our Purpose, Values, and Transparency
           </h2>
           <p className="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
-            When you're dealing with debt, complicated financial websites and confusing calculations can make an already stressful situation even harder.
+            When you are dealing with debt, confusing financial websites and aggressive sales pitches can make an already stressful situation even harder. Debt Be Less was created to offer an honest, free, and private alternative.
           </p>
         </div>
 
-        {/* Story & Philosophy Hero Card */}
+        {/* 1. Purpose & Mission Hero Card */}
         <div className="glass-card rounded-3xl p-8 sm:p-12 mb-12 border border-white/80 shadow-lg">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 mx-auto">
               <Sparkles className="w-6 h-6" />
             </div>
             
-            <p className="text-sm font-semibold uppercase tracking-widest text-emerald-700">
-              Debt Be Less was created with a different idea:
+            <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-700">
+              The Purpose of Debt Be Less
             </p>
             
             <h3 className="text-3xl sm:text-4xl font-extrabold text-blue-950 title-serif">
-              Keep it simple.
+              Clarity Through Clean, Honest Mathematics
             </h3>
 
             <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
-              The Debt Be Less calculator lets you enter your debt information and see an estimated payoff timeline. You can also explore how making additional payments may change your payoff date and reduce the amount of interest you pay.
+              Many debt calculators online are primarily designed as lead-generation tools to capture your contact details and sell your information to high-interest consolidation lenders or for-profit settlement companies.
+            </p>
+
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed">
+              <strong>Debt Be Less operates differently.</strong> Our mission is to provide clean, accessible debt repayment modeling with complete transparency. You enter your numbers, explore how extra payments affect your timeline, compare proven strategies, and walk away with actionable clarity—without giving up your personal privacy or being pressured into financial products.
             </p>
 
             <div className="pt-2">
               <p className="text-lg sm:text-xl font-bold text-blue-950 title-serif">
-                Seeing the numbers can make a big difference.
+                Seeing the numbers changes the conversation.
               </p>
               <p className="text-slate-600 text-sm sm:text-base mt-2">
-                Instead of wondering, <span className="italic font-medium text-slate-800">"When will I ever get this paid off?"</span>, you can start answering questions such as:
+                Instead of wondering, <span className="italic font-medium text-slate-800">"When will I ever get this paid off?"</span>, you can answer concrete questions:
               </p>
             </div>
 
@@ -107,110 +115,173 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onCalculateClick }) 
           </div>
         </div>
 
-        {/* 2-Column Content Grid: "You Don't Have to Be Perfect" & "What You'll Find" */}
+        {/* 2. Who We Help & What Visitors Can Do (2-Column Grid) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           
-          {/* Card 1: You Don't Have to Be Perfect */}
+          {/* Card: Who Debt Be Less Helps */}
           <div className="glass-card glass-card-hover rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-white/70">
             <div className="space-y-5">
-              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold shadow-sm">
-                <HeartHandshake className="w-6 h-6" />
+              <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold shadow-sm">
+                <Users className="w-6 h-6" />
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-bold text-blue-950 title-serif">
-                You Don't Have to Be Perfect
+                Who This Site Helps
               </h3>
 
-              <p className="text-slate-700 text-base leading-relaxed">
-                Paying off debt isn't always a straight line.
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+                Debt Be Less is built for everyday individuals, couples, recent graduates, and families navigating consumer debt, including:
               </p>
 
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Some months you may be able to make an extra payment. Other months, you may only be able to make the minimum payment. Unexpected expenses happen. Life happens.
-              </p>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Credit Card Borrowers:</strong> Individuals paying high interest rates who want to see how quickly balances diminish when adding discretionary extra payments.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Multi-Debt Households:</strong> People managing several loans simultaneously who need a structured priority sequence (Snowball vs. Avalanche).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Planners Seeking Objectivity:</strong> Borrowers who want neutral mathematical comparisons rather than promotional loan sales pitches.</span>
+                </li>
+              </ul>
 
-              <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 text-emerald-900">
-                <p className="text-sm sm:text-base font-semibold leading-relaxed">
-                  The important thing is to understand where you are and keep moving in the right direction whenever you can.
-                </p>
-                <p className="text-xs sm:text-sm text-emerald-700 mt-2 font-medium">
-                  Even a small additional payment can make a difference over time.
-                </p>
+              <div className="p-4 rounded-2xl bg-slate-100/80 border border-slate-200/80 text-slate-700 text-xs sm:text-sm">
+                Paying off debt isn't a moral test—it is a financial project. Understanding where you stand is the most effective first step toward progress.
               </div>
             </div>
           </div>
 
-          {/* Card 2: What You'll Find at Debt Be Less */}
+          {/* Card: What You Can Do With Free Tools */}
           <div className="glass-card glass-card-hover rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-white/70">
             <div className="space-y-5">
-              <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shadow-sm">
                 <Layers className="w-6 h-6" />
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-bold text-blue-950 title-serif">
-                What You'll Find at Debt Be Less
+                What You Can Do Here
               </h3>
 
-              <p className="text-slate-700 text-base leading-relaxed">
-                <strong className="font-semibold text-blue-950">Debt Be Less is more than a calculator.</strong>
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+                All features on Debt Be Less are 100% free, require no account creation, and perform calculations locally:
               </p>
 
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                The site provides information and tools designed to help you understand different ways of paying down debt, including:
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                 {featuresList.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-700">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
 
-              <p className="text-xs sm:text-sm font-medium text-slate-600 pt-2 border-t border-slate-200/70">
-                The goal is to give you information you can actually use—not make debt management more complicated.
+              <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 text-emerald-900 text-xs sm:text-sm">
+                <strong>No Paywalls, No Subscriptions:</strong> Every tool, comparison feature, and guide is openly available to any visitor without restrictions.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* 3. Honest Background & Zero-Tracking Privacy (2-Column Grid) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          
+          {/* Card: Honest Background (No Fake Credentials or Testimonials) */}
+          <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/70 space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold shadow-sm">
+              <FileCheck className="w-6 h-6" />
+            </div>
+
+            <h3 className="text-xl sm:text-2xl font-bold text-blue-950 title-serif">
+              Honest Background
+            </h3>
+
+            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              Debt Be Less is an independent educational website created to provide clear, accessible debt payoff calculations and general personal finance information.
+            </p>
+
+            <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p>
+                <strong>Independence &amp; Transparency:</strong> The site is not affiliated with, endorsed by, or partnered with any bank, lender, credit card issuer, credit counseling service, or financial institution.
+              </p>
+              <p>
+                The site does not claim certified financial qualifications, professional licensing, or institutional affiliations. We do not publish manufactured testimonials, invented credentials, or sponsored endorsements. All calculations are derived from standard amortization mathematics and published consumer finance education resources.
+              </p>
+            </div>
+          </div>
+
+          {/* Card: Client-Side Privacy Architecture */}
+          <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/70 space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shadow-sm">
+              <Lock className="w-6 h-6" />
+            </div>
+
+            <h3 className="text-xl sm:text-2xl font-bold text-blue-950 title-serif">
+              100% In-Browser Privacy
+            </h3>
+
+            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              Your debt details and financial balances are personal. We respect that by keeping your data on your device.
+            </p>
+
+            <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p>
+                <strong>Local Computation:</strong> When you enter balances, interest rates, or extra payments into our calculator, the calculations run entirely inside your browser's JavaScript engine.
+              </p>
+              <p>
+                We do not store your balances on external servers, we do not require account registration, and we do not sell or transmit your financial inputs to third-party lenders, credit bureaus, or advertising networks.
               </p>
             </div>
           </div>
 
         </div>
 
-        {/* Card 3: A Tool, Not a Promise */}
+        {/* 4. Limitations of the Estimates & Disclaimers */}
         <div className="glass-card rounded-3xl p-8 sm:p-10 mb-12 border border-white/70">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 mt-1">
               <Info className="w-5 h-5" />
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
               <h3 className="text-xl sm:text-2xl font-bold text-blue-950 title-serif">
-                A Tool, Not a Promise
+                Limitations of the Estimates &amp; Educational Notice
               </h3>
               
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                Debt Be Less provides calculations and general educational information.
+              <p>
+                While the mathematical models used by Debt Be Less are accurate under standard amortization assumptions, real-world credit accounts have variables that may cause actual outcomes to differ:
               </p>
 
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                Calculator results are estimates based on the information you enter and assumptions used by the calculator. Your actual results may be different because interest rates, minimum payments, fees, payment dates, balances, and other factors can change.
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <strong className="text-blue-950 block mb-1">Variable Interest Rates</strong>
+                  Most credit card APRs fluctuate with the Federal Prime Rate, altering future interest charges.
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <strong className="text-blue-950 block mb-1">Daily Compounding &amp; Fees</strong>
+                  Lenders compute daily periodic interest and may assess late, annual, or transfer fees not included in the model.
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <strong className="text-blue-950 block mb-1">No Guarantees</strong>
+                  Payoff dates are educational estimates, not guaranteed outcomes. Discipline and steady payments are essential.
+                </div>
+              </div>
 
-              <div className="p-4 rounded-xl bg-slate-100/80 border border-slate-200 text-slate-700 space-y-2 text-xs sm:text-sm">
-                <p>
-                  <strong>Debt Be Less is not a bank, lender, credit counselor, financial institution, or investment adviser.</strong>
+              <div className="p-4 rounded-xl bg-slate-100/90 border border-slate-200 text-slate-700 space-y-1.5 text-xs">
+                <p className="font-bold text-slate-900">
+                  Disclaimer of Professional Advice:
                 </p>
                 <p>
-                  Nothing on this website should be considered personalized financial, legal, tax, or investment advice.
-                </p>
-                <p className="text-slate-600 text-xs">
-                  If you're dealing with significant financial difficulties, consider speaking with a qualified financial professional or nonprofit credit counseling organization about your individual situation.
+                  Debt Be Less is not a financial advisory service, law firm, accounting practice, or credit counseling agency. Nothing on this website constitutes personalized financial, legal, investment, or tax advice. If you face severe financial distress, consider contacting a certified nonprofit credit counseling organization through the National Foundation for Credit Counseling (NFCC.org).
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Card 4: Start With One Number (Interactive CTA Banner) */}
+        {/* 5. Start With One Number (Interactive CTA Banner) */}
         <div className="glass-panel-dark rounded-3xl p-8 sm:p-12 text-center text-white border border-white/20 shadow-xl relative overflow-hidden">
           <div className="max-w-3xl mx-auto space-y-6 relative z-10">
             
@@ -229,10 +300,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onCalculateClick }) 
               <p className="font-semibold text-emerald-300">See where you are.</p>
               <p>Then see what happens if you make a little extra payment.</p>
               <p className="pt-2 text-sm sm:text-base text-slate-300">
-                Sometimes the first step toward becoming debt-free isn't paying off the entire balance.
+                Sometimes the first step toward becoming debt-free isn't paying off the entire balance immediately.
               </p>
               <p className="text-sm sm:text-base text-slate-300">
-                It's simply finding out where you stand.
+                It's simply knowing where you stand.
               </p>
               <p className="font-medium text-white">
                 That's what Debt Be Less is here to help you do.
