@@ -13,13 +13,13 @@ import {
 export const EducationalSection: React.FC = () => {
   const [selectedTier, setSelectedTier] = useState<number>(100);
 
-  // Sample scenario: $10,000 credit card balance @ 20% APR with $250 min payment
+  // Sample scenario: $10,000 credit card balance @ 20% APR with $250 min payment (independently calculated)
   const scenarios: Record<number, { months: number; interest: number; yearsSaved: string; interestSaved: number }> = {
-    0: { months: 67, interest: 6600, yearsSaved: '0 years', interestSaved: 0 },
-    25: { months: 54, interest: 4800, yearsSaved: '1 year 1 month', interestSaved: 1800 },
-    50: { months: 45, interest: 3800, yearsSaved: '1 year 10 months', interestSaved: 2800 },
-    100: { months: 34, interest: 2700, yearsSaved: '2 years 9 months', interestSaved: 3900 },
-    200: { months: 23, interest: 1700, yearsSaved: '3 years 8 months', interestSaved: 4900 },
+    0: { months: 67, interest: 6617, yearsSaved: '0 years', interestSaved: 0 },
+    25: { months: 57, interest: 5499, yearsSaved: '10 months', interestSaved: 1118 },
+    50: { months: 50, interest: 4718, yearsSaved: '1 year 5 months', interestSaved: 1899 },
+    100: { months: 40, interest: 3692, yearsSaved: '2 years 3 months', interestSaved: 2925 },
+    200: { months: 28, interest: 2595, yearsSaved: '3 years 3 months', interestSaved: 4022 },
   };
 
   const currentScenario = scenarios[selectedTier] || scenarios[100];
@@ -38,7 +38,7 @@ export const EducationalSection: React.FC = () => {
             How an Interest Savings Calculator Helps You Pay Off Debt Faster
           </h2>
           <p className="mt-3 text-slate-600 text-base sm:text-lg">
-            Minimum payments on a <strong className="font-semibold text-blue-950">credit card payoff calculator</strong> reveal how high APRs keep you trapped. See how adding even small monthly extra payments transforms your <strong className="font-semibold text-blue-950">debt payoff schedule</strong> and accelerates your journey to becoming completely debt-free.
+            Minimum payments on a <strong className="font-semibold text-blue-950">credit card payoff calculator</strong> illustrate how interest accumulates over time. See how adding even small monthly extra payments affects your <strong className="font-semibold text-blue-950">debt payoff schedule</strong> and can help you reach a debt-free date sooner.
           </p>
         </div>
 
@@ -51,23 +51,23 @@ export const EducationalSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-bold mb-4 shadow-sm">
                 <ShieldAlert className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-blue-950 title-serif mb-2">1. The Minimum Payment Trap</h3>
+              <h3 className="text-xl font-bold text-blue-950 title-serif mb-2">1. Minimum Payment Dynamics</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                When you pay only the minimum, up to 75% of your payment goes toward interest charges alone. Your principal balance barely trickles down.
+                When paying only the minimum, a substantial portion of your monthly payment often covers interest charges rather than reducing the balance. The exact portion going toward interest versus principal varies depending on the balance, interest rate, payment amount, and lender terms.
               </p>
             </div>
 
             {/* Visual Bar Diagram */}
             <div className="mt-6 pt-4 border-t border-slate-200/80 space-y-2">
               <div className="text-xs text-slate-500 font-bold flex justify-between">
-                <span>Payment Breakdown (Min Payment)</span>
+                <span>Payment Breakdown Example (High-APR Balance)</span>
               </div>
               <div className="h-6 w-full bg-slate-100 rounded-lg overflow-hidden flex">
                 <div className="h-full bg-red-500 text-[10px] font-bold text-white flex items-center justify-center" style={{ width: '70%' }}>
-                  70% Interest
+                  ~70% Interest (Example)
                 </div>
                 <div className="h-full bg-slate-400 text-[10px] font-bold text-white flex items-center justify-center" style={{ width: '30%' }}>
-                  30% Principal
+                  ~30% Principal (Example)
                 </div>
               </div>
             </div>
@@ -79,20 +79,20 @@ export const EducationalSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4 shadow-sm">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-blue-950 title-serif mb-2">2. 100% Principal Impact</h3>
+              <h3 className="text-xl font-bold text-blue-950 title-serif mb-2">2. Extra Payment Impact</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Every extra dollar you pay above the minimum goes <strong>100% directly toward reducing principal</strong>. This permanently lowers future interest accrual.
+                Additional payments can reduce the outstanding balance and may reduce future interest costs, depending on the lender's payment rules and whether there are accrued interest or fees.
               </p>
             </div>
 
             {/* Visual Bar Diagram */}
             <div className="mt-6 pt-4 border-t border-slate-200/80 space-y-2">
               <div className="text-xs text-slate-500 font-bold flex justify-between">
-                <span>Extra Payment Impact</span>
+                <span>Extra Payment Allocation</span>
               </div>
               <div className="h-6 w-full bg-slate-100 rounded-lg overflow-hidden flex">
                 <div className="h-full bg-emerald-500 text-[10px] font-bold text-white flex items-center justify-center w-full">
-                  100% Principal Reduction!
+                  Applied to Balance (Per Lender Terms)
                 </div>
               </div>
             </div>
@@ -104,9 +104,9 @@ export const EducationalSection: React.FC = () => {
               <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold mb-4 shadow-sm">
                 <PiggyBank className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-blue-950 title-serif mb-2">3. The Rollover Superpower</h3>
+              <h3 className="text-xl font-bold text-blue-950 title-serif mb-2">3. The Rollover Effect</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                As each loan reaches $0 balance, its minimum payment isn’t spent—it gets added to your extra payment pool, causing the next debt to dissolve in record time.
+                As each loan is paid off, its payment amount can be rolled into your next priority debt, helping accelerate the payoff of subsequent balances.
               </p>
             </div>
 
@@ -191,7 +191,7 @@ export const EducationalSection: React.FC = () => {
           </div>
 
           <p className="text-center text-xs text-slate-500 mt-4 font-medium">
-            Even an extra $25/month cuts over a year off your payoff schedule. Every bit adds up!
+            Even an extra $25/month cuts nearly a year (10 months) off your payoff schedule and saves $1,118 in interest. Every bit adds up!
           </p>
         </div>
 
