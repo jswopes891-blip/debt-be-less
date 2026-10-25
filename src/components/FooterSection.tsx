@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { ShieldCheck, Heart, ArrowUp } from 'lucide-react';
 import { FooterModals } from './FooterModals';
@@ -32,7 +34,34 @@ export const FooterSection: React.FC = () => {
             </div>
 
             {/* Footer Navigation Links */}
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
+            <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6 text-sm font-medium">
+              <button
+                onClick={() => {
+                  const el = document.getElementById('guide');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="hover:text-emerald-400 transition-colors cursor-pointer text-emerald-300 font-semibold"
+              >
+                Payoff Guide
+              </button>
+              <button
+                onClick={() => {
+                  const el = document.getElementById('calculator-guide');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="hover:text-emerald-400 transition-colors cursor-pointer"
+              >
+                How It Works
+              </button>
+              <button
+                onClick={() => {
+                  const el = document.getElementById('about');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="hover:text-emerald-400 transition-colors cursor-pointer"
+              >
+                About
+              </button>
               <button
                 onClick={() => setActiveModal('privacy')}
                 className="hover:text-emerald-400 transition-colors cursor-pointer"
