@@ -1,4 +1,4 @@
-import React from 'react';
+iimport React from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { BenefitsSection } from './components/BenefitsSection';
@@ -6,6 +6,8 @@ import { CalculatorSection } from './components/CalculatorSection';
 import { StrategySection } from './components/StrategySection';
 import { EducationalSection } from './components/EducationalSection';
 import { AboutSection } from './components/AboutSection';
+import { CalculatorExplanation } from './components/CalculatorExplanation';
+import { DebtPayoffGuide } from './components/DebtPayoffGuide';
 import { FaqSection } from './components/FaqSection';
 import { CtaSection } from './components/CtaSection';
 import { FooterSection } from './components/FooterSection';
@@ -28,6 +30,8 @@ export default function App() {
         <CalculatorSection />
         <StrategySection onCompareClick={handleCalculateClick} />
         <EducationalSection />
+        <CalculatorExplanation />
+        <DebtPayoffGuide />
 
         {/* About Debt Be Less Section */}
         <AboutSection onCalculateClick={handleCalculateClick} />
